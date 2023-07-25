@@ -1,0 +1,52 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .info-wrap {
+        text-align: center;       
+
+    }
+</style>
+
+
+<!-- ========================= SECTION  ========================= -->
+<section class="section-name padding-y-sm" style="padding-top: 100px;min-height: 500px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-product-grid">
+                    <a href="{% url 'common:admin_login' %}" class="img-wrap"> <img src="{% static 'images/items/1.jpg' %}"> </a>
+                    <figcaption class="info-wrap">
+                        <a href="{% url 'common:admin_login' %}" class="title"><b>Admin</b></a>
+
+                    </figcaption>
+                </div>
+            </div> <!-- col.// -->
+            <div class="col-md-4">
+                <div class="card card-product-grid">
+                    <a href="{% url 'common:seller_login' %}" class="img-wrap"> <img src="{% static 'images/items/2.jpg' %}"> </a>
+                    <figcaption class="info-wrap">
+                        <a href="{% url 'common:seller_login' %}" class="title"><b>Seller</b></a>
+
+                    </figcaption>
+                </div>
+            </div> <!-- col.// -->
+            <div class="col-md-4">
+                <div class="card card-product-grid">
+                    <a href="{% url 'customer:customer_home' %}" class="img-wrap"> <img src="{% static 'images/items/3.jpg' %}"> </a>
+                    <figcaption class="info-wrap">
+                        <a href="{% url 'customer:customer_home' %}" class="title"><b>Customer</b> </a>
+
+                    </figcaption>
+                </div>
+
+            </div> <!-- row.// -->
+
+        </div><!-- container // -->
+</section>
+<!-- ========================= SECTION  END// ========================= -->
+
+
+
+{% endblock %}
